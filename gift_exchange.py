@@ -18,7 +18,7 @@ import sys
 import time
 
 if __name__ == '__main__':
-    from data import participants, last_years_pairs, families
+    from data import participants, families
 
     chosen = []
 
@@ -31,8 +31,7 @@ if __name__ == '__main__':
         # although I'm not really sure why
         giver = random.choice(givers)
         libgiftex.debug_fine("GIVER: %s" % giver)
-        recipients = libgiftex.possible_recipients(giver, participants, \
-                chosen, last_years_pairs, families)
+        recipients = libgiftex.possible_recipients(giver, participants, chosen, families)
         # brute force abort/retry
         if len(recipients) == 0:
             libgiftex.debug("No recipients, trying a different giver...")
@@ -57,9 +56,9 @@ if __name__ == '__main__':
     f.write("participants = ")
     f.write(pprint.pformat(participants))
     f.write("\n\n")
-    f.write("last_years_pairs = ")
-    f.write(pprint.pformat(chosen))
-    f.write("\n\n")
+    # f.write("last_years_pairs = ")
+    # f.write(pprint.pformat(chosen))
+    # f.write("\n\n")
     f.write("families = ")
     f.write(pprint.pformat(families))
     f.write("\n")

@@ -22,21 +22,20 @@ def possible_givers(participants, chosen):
         possible_givers.remove(giver)
     return possible_givers
 
-def possible_recipients(giver, participants, chosen, last_years_pairs, families):
-    """Exclude all rule-breaking recipients and return whatever's left, if
-    anything."""
+def possible_recipients(giver, participants, chosen, families):
+    """Exclude all rule-breaking recipients and return whatever's left, if anything."""
 
     possible_recipients = copy(participants)
 
     # rule 3 - can't choose yourself
     possible_recipients.remove(giver)
 
-    # rule 1 - different pairing than last year
-    for tmp_giver, recipient in last_years_pairs:
-        if tmp_giver == giver and (giver, recipient) in last_years_pairs \
-                and recipient in possible_recipients:
-            debug_fine("%s gave to %s last year, excluding" % (giver, recipient))
-            possible_recipients.remove(recipient)
+    # # rule 1 - different pairing than last year
+    # for tmp_giver, recipient in last_years_pairs:
+    #     if tmp_giver == giver and (giver, recipient) in last_years_pairs \
+    #             and recipient in possible_recipients:
+    #         debug_fine("%s gave to %s last year, excluding" % (giver, recipient))
+    #         possible_recipients.remove(recipient)
 
     # rule 2 - give outside nuclear family
     for family in families:
