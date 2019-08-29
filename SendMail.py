@@ -3,13 +3,11 @@ import smtplib
 from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+# from gift_exchange import gift_exchange
+import gift_exchange
 
 MY_ADDRESS = 'garciafamilygiftexchange@gmail.com'
 PASSWORD = 'SuperSecretPass123'
-
-# Get Matches Dictionary
-# from gift_exchange import gift_exchange
-import gift_exchange
 
 #  Reads the contacts File
 def get_contacts(filename):
@@ -44,6 +42,7 @@ def main():
     s.starttls()
     s.login(MY_ADDRESS, PASSWORD)
 
+    # Get Matches Dictionary
     matches = gift_exchange.gift_exchange()
 
     # For each contact, send the email:
