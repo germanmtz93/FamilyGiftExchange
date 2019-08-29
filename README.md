@@ -16,5 +16,3 @@ Python 2.7+.
 ## Copyright, License
 
 Copyright (C) 2016 Adam Monsen
-
-Available free of charge under the AGPLv3. See COPYING for the full license text.
