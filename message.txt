@@ -1,7 +1,16 @@
 Dear ${GIVER_NAME}, 
 
 The person you are giving a gift to this Christmas is...
-${GIVER_NAME}
+${RECEIVER_NAME}
 
-Yours Truly
+Regards,
 Germans Computer
+
+---------------
+Hola ${GIVER_NAME},
+
+La persona a la que le estás regalando esta Navidad es...
+${RECEIVER_NAME}
+
+Saludos,
+Computadora De German

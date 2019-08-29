@@ -17,18 +17,12 @@ import random
 import sys
 import time
 
-if __name__ == '__main__':
+def gift_exchange():
     from data import participants, families
-
     chosen = []
-
-    print("Please Wait! The robot is picking numbers out of a hat...")
-    print("")
-    time.sleep(5)
     while len(chosen) != len(participants):
         givers = libgiftex.possible_givers(participants, chosen)
-        # if we omit randomization here, our "abort/retry" (below) may fail,
-        # although I'm not really sure why
+        # if we omit randomization here, our "abort/retry" (below) may fail, although I'm not really sure why
         giver = random.choice(givers)
         libgiftex.debug_fine("GIVER: %s" % giver)
         recipients = libgiftex.possible_recipients(giver, participants, chosen, families)
@@ -64,10 +58,8 @@ if __name__ == '__main__':
     f.write("\n")
     f.close()
 
-    matches = []
+    matches = {}
     for giver, recipient in chosen:
-        # print "%s gives to %s" % (giver, recipient)
-        local_match = [giver, recipient]
-        matches.append(local_match)
-        
-    print(matches)
+        matches[giver] = recipient
+
+    return(matches)
