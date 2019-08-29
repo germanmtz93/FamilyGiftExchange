@@ -5,13 +5,13 @@ from copy import copy
 
 def debug(msg):
     if debug_on:
-        print msg
+        print(msg)
     else:
         pass
 
 def debug_fine(msg):
     if debug_fine_on:
-        print msg
+        print(msg)
     else:
         pass
 

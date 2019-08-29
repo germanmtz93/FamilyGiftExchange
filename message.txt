@@ -1,0 +1,7 @@
+Dear ${GIVER_NAME}, 
+
+The person you are giving a gift to this Christmas is...
+${GIVER_NAME}
+
+Yours Truly
+Germans Computer

@@ -22,8 +22,8 @@ if __name__ == '__main__':
 
     chosen = []
 
-    print "Please Wait! The robot is picking numbers out of a hat..."
-    print ""
+    print("Please Wait! The robot is picking numbers out of a hat...")
+    print("")
     time.sleep(5)
     while len(chosen) != len(participants):
         givers = libgiftex.possible_givers(participants, chosen)
@@ -64,6 +64,10 @@ if __name__ == '__main__':
     f.write("\n")
     f.close()
 
+    matches = []
     for giver, recipient in chosen:
-        print "%s gives to %s" % (giver, recipient)
-        time.sleep(5)
+        # print "%s gives to %s" % (giver, recipient)
+        local_match = [giver, recipient]
+        matches.append(local_match)
+        
+    print(matches)
