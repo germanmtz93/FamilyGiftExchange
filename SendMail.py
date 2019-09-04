@@ -35,7 +35,7 @@ def read_template(filename):
 # Main Fnction
 def main():
     names, emails = get_contacts('contacts.txt') # read contacts
-    message_template = read_template('message.txt')
+    message_template = read_template('testMessage.txt')
 
     # set up the SMTP server
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)

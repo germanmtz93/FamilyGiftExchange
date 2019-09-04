@@ -1,16 +1,33 @@
-Dear ${GIVER_NAME}, 
+Ho ho hello ${GIVER_NAME},
 
-The person you are giving a gift to this Christmas is...
-${RECEIVER_NAME}
+This Christmas 2019 you will be giving a gift to….
+${RECEIVER_NAME} !!
 
-Regards,
-Germans Computer
+Please be sure to:
+-Keep your recipient super-SECRET!
+-Put a whole lot of thought and care into your present.
+-The recommended gift price is between 50 – 100 USD but is not mandatory your present can personal and/or homemade. 
+-If you are nervous or unsure about your present be sure to include a gift receipt.
 
----------------
-Hola ${GIVER_NAME},
+Wishing you a Happy Holiday Season,
+A Computer Program
 
-La persona a la que le estás regalando esta Navidad es...
-${RECEIVER_NAME}
+------
+JO-JO-Holla ${GIVER_NAME},
 
-Saludos,
-Computadora De German
+
+Esta Navidad 2019 le darás un regalo a…
+${RECEIVER_NAME} !!
+
+Favor asegúrese de:
+-Mantenga a su destinatario super-SECRETO!
+-Ponga mucho pensamiento y carino en su regalo
+-El precio de regalo recomendado es entre 50 - 100USD pero no es obligatorio su regalo puede ser personal y / o echo a mano.
+-Si estás nervioso o inseguro acerca de su regalo, asegúrese de incluir un recibo del regalo.
+
+Feliz Navidad,
+Un Programa de Computadora
+
+------
+GitHub Link:
+https://github.com/germanmtz93/FamilyGiftExchange
