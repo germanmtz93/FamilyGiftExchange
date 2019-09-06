@@ -35,7 +35,7 @@ def read_template(filename):
 # Main Fnction
 def main():
     names, emails = get_contacts('contacts.txt') # read contacts
-    message_template = read_template('testMessage.txt')
+    message_template = read_template('message.txt')
 
     # set up the SMTP server
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)
@@ -53,12 +53,12 @@ def main():
         message = message_template.substitute(GIVER_NAME=name.title(), RECEIVER_NAME=str(matches[name]))
 
         # Prints out the message body for our sake
-        print(message)
+        #print(message)
 
         # setup the parameters of the message
         msg['From'] = MY_ADDRESS
         msg['To'] = email
-        msg['Subject'] = "Garcia Family Gift Exchange 2019"
+        msg['Subject'] = "Garcia Family Gift Exchange 2019!"
         
         # add in the message body
         msg.attach(MIMEText(message, 'plain'))
